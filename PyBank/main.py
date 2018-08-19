@@ -37,15 +37,14 @@ cleaned_csv =(
             f"Total Net Amount: $ + {total_net_amount}\n"
             f"Average Change: $ + {average_change}\n"
             f"Greatest Increase: $ + {greatest_increase}\n"
-            f"Greatest Decrease: $ + {greatest_decrease}\n"
-            )
+            f"Greatest Decrease: $ + {greatest_decrease}\n")
 print(cleaned_csv)
 
 
 output_file = os.path.join("output.csv")
 with open(output_file, "w", newline="", encoding="utf-8") as datafile:
    writer = csv.writer(datafile)
-   writer.writerows(cleaned_csv)
+   writer.writerow([cleaned_csv])
     
     
 

@@ -63,12 +63,13 @@ with open(csvpath, newline='',encoding="utf-8") as csvfile:
         f"----------------------------\n" )
 
     print(election_results)
+    
 
 
 output_file = os.path.join("output.csv")
-with open(output_file, "w", newline="", encoding="utf-8") as csv_file:
-    writer = csv.writer(csv_file)
-    writer.writerows(election_results)
+with open(output_file, "w", newline="", encoding="utf-8") as datafile:
+   writer = csv.writer(datafile)
+   writer.writerow([election_results])
 
 
 
